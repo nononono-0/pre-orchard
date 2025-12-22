@@ -1,0 +1,62 @@
+@import url('reset.css');
+@import url('font.css');
+@import url('animation.css');
+
+body {
+    font-family: 'Neutral Face', sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/фон.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.screens-container {
+    position: relative;
+    z-index: 1;
+}
+.screen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+.screen-1 {
+    height: 721px;
+    margin-top: 181px;
+    margin-bottom: 54px;
+    gap: 181px;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-weight: 500;
+    color: #FF9F06;
+    font-size: 200px;
+}
+.ball {
+    background-image: url("../assets/img/Group\ 2136139002.png");
+    width: 111px;
+    height: 109px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.run {
+    display: flex;
+    width: 1280px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

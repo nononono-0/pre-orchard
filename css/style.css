@@ -29,10 +29,49 @@ body {
     margin-bottom: 54px;
     gap: 181px;
 }
+.orchard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 h1 {
     font-weight: 500;
     color: #FF9F06;
     font-size: 200px;
+}
+.wave-text:nth-child(1) { 
+    animation: wave1 2s linear infinite;
+    animation-delay: 0s;
+}
+
+.wave-text:nth-child(2) { 
+    animation: wave2 2s linear infinite;
+    animation-delay: 0.2s;
+}
+
+.wave-text:nth-child(3) { 
+    animation: wave3 2s linear infinite;
+    animation-delay: 0.4s;
+}
+
+.wave-text:nth-child(4) { 
+    animation: wave4 2s linear infinite;
+    animation-delay: 0.6s;
+}
+
+.wave-text:nth-child(5) { 
+    animation: wave3 2s linear infinite;
+    animation-delay: 0.4s;
+}
+
+.wave-text:nth-child(6) { 
+    animation: wave2 2s linear infinite;
+    animation-delay: 0.2s;
+}
+
+.wave-text:nth-child(7) { 
+    animation: wave1 2s linear infinite;
+    animation-delay: 0s;
 }
 .ball {
     background-image: url("../assets/img/Group\ 2136139002.png");
@@ -40,26 +79,28 @@ h1 {
     height: 109px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
+    animation: ball-increase 1s linear infinite;
 }
-.run {
-    background-image: url("../assets/img/Group\ 2136139039.png");
+.run1 {
+    background-image: url("../assets/img/run6.png");
     width: 100%;
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    animation: run1 1s steps(1) infinite;
 }
 .screen-2 {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 100vh;
+    height: 621px;
 }
 .screen-2-block1 {
     width: 25%;
-    height: 50vh;
+    height: 50%;
     background-color: #132E1D;
     display: flex;
     align-items: center;
@@ -73,27 +114,89 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 2;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: ball-rotate 1.5s linear infinite;
+}
+.ball-pineapple:hover {
+    animation: ball-flip 1s;
 }
 .screen-2-block2 {
     width: 50%;
-    height: 50vh;
+    height: 50%;
     background-color: #FF9F06;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    overflow: hidden;
 }
-.ball-tomato {
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/img/tomato.png");
+.tomatoes {
+    position: absolute;
+    background-image: url("../assets/img/Group\ 2136139022.png");
+    top: -100px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    animation: fall linear infinite;
+}
+.t1 {
+    width: 100px;
+    height: 100px;
+    left: 10%;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+.t2 {
+    width: 70px;
+    height:70px;
+    left: 25%;
+    animation-duration: 3.5s;
+    animation-delay: 0.5s;
+}
+.t3 {
+    width: 60px;
+    height: 60px;
+    left: 35%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+.t4 {
+    width: 90px;
+    height: 90px;
+    left: 40%;
+    animation-duration: 4.2s;
+    animation-delay: 1.5s;
+}
+.t5 {
+    width: 80px;
+    height: 80px;
+    left: 55%;
+    animation-duration: 3.8s;
+    animation-delay: 2s;
+}
+.t6 {
+    width: 70px;
+    height: 70px;
+    left: 60%;
+    animation-duration: 2.1s;
+    animation-delay: 2.5s;
+}
+.t7 {
+    width: 100px;
+    height: 100px;
+    left: 70%;
+    animation-duration: 5.3s;
+    animation-delay: 3s;
+}
+.t8 {
+    width: 60px;
+    height: 60px;
+    left: 85%;
+    animation-duration: 1.6s;
+    animation-delay: 3.5s;
 }
 .screen-2-block3 {
     width: 25%;
-    height: 50vh;
+    height: 50%;
     background-color: #B8231E;
     display: flex;
     align-items: center;
@@ -107,10 +210,17 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 2;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: ball-rotate 1.5s linear infinite;
+}
+.ball-lemon:hover {
+    animation: ball-flip 1s;
 }
 .screen-2-block4 {
     width: 50%;
-    height: 50vh;
+    height: 50%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -121,57 +231,82 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.s1 {
+    background-color: #B8231E;
+}
+.s2 {
+    background-color: #FF9F06;
+}
+.s3 {
     background-color: #132E1D;
 }
 .square1-1 {
     width: 70%;
     height: 70%;
-    background-color: #B8231E;
+    animation: square-increase 3s ease-in-out infinite;
+    background-color: #FF9F06;
     border-radius: 100px;
+    animation-delay: 0s;
 }
 .square2-1 {
     width: 70%;
     height: 70%;
-    background-color: #FF9F06;
+    animation: square-increase 3s ease-in-out infinite;
+    background-color: #B8231E;
+    animation-delay: 0.4s;
 }
 .square3-1 {
     width: 70%;
     height: 70%;
-    background-color: #B8231E;
+    animation: square-increase 3s ease-in-out infinite;
+    background-color: #FF9F06;
     border-radius: 100px;
+    animation-delay: 0.8s;
 }
 .square4-1 {
     width: 70%;
     height: 70%;
+    animation: square-increase 3s ease-in-out infinite;
     background-color: #FF9F06;
+    animation-delay: 1.2s;
 }
 .square5-1 {
     width: 70%;
     height: 70%;
+    animation: square-increase 3s ease-in-out infinite;
     background-color: #B8231E;
+    animation-delay: 1.6s;
 }
 .square6-1 {
     width: 70%;
     height: 70%;
+    animation: square-increase 3s ease-in-out infinite;
     background-color: #FF9F06;
     border-radius: 100px;
+    animation-delay: 2s;
 }
 .square7-1 {
     width: 70%;
     height: 70%;
-    background-color: #B8231E;
+    animation: square-increase 3s ease-in-out infinite;
+    background-color: #FF9F06;
+    animation-delay: 2.4s;
 }
 .square8-1 {
     width: 70%;
     height: 70%;
-    background-color: #FF9F06;
+    animation: square-increase 3s ease-in-out infinite;
+    background-color: #B8231E;
     border-radius: 100px;
+    animation-delay: 2.8s;
 }
 .screen-2-block5 {
     width: 50%;
-    height: 50vh;
+    height: 50%;
     background-color: #132E1D;
     position: relative;
+    overflow: hidden;
 }
 .circle {
     width: 16%;
@@ -181,4 +316,252 @@ h1 {
     position: absolute;
     bottom: 0;
     left: 0;
+    animation: bounce-around 3s linear infinite;
+}
+.run2 {
+    background-image: url("../assets/img/6run.png");
+    width: 100%;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: run2 1s steps(1) infinite;
+}
+.screen-3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    margin-top: 62px;
+    margin-bottom: 62px;
+}
+.foto1 {
+    background-image: url("../assets/img/foto1-1.png");
+    width: 358px;
+    height: 538px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: wave4 2s linear infinite;
+}
+.foto1:hover {
+    animation: foto-run1 1s steps(1) infinite;
+}
+.foto2 {
+    background-image: url("../assets/img/foto2-1.png");
+    width: 358px;
+    height: 538px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: wave4 2s linear infinite;
+    animation-delay: 1s;
+}
+.foto2:hover {
+    animation: foto-run2 1s steps(1) infinite;
+}
+.foto3 {
+    background-image: url("../assets/img/foto3-5.png");
+    width: 358px;
+    height: 538px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: wave4 2s linear infinite;
+}
+.foto3:hover {
+    animation: foto-run3 1s steps(1) infinite;
+}
+.screen-4 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.block1 {
+    background-color: #B8231E;
+    width: 34%;
+    height: 678px;
+    position: relative;
+    overflow: hidden;
+}
+.block-lemon {
+    position: absolute;
+    top: 300px;
+    left: 58px;
+    width: 70%;
+    height: 70%;
+    background-image: url("../assets/img/gates1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+.hit-checkbox {
+    display: none;
+}
+.ball-lemon1 {
+    position: absolute;
+    top: 24px;
+    left: 139px;
+    width: 40%;
+    height: 40%;
+    background-image: url("../assets/img/lemon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    cursor: pointer;
+    animation: gates-lemon 3s linear;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+.hit-checkbox:checked ~ .ball-lemon1 {
+    animation-play-state: running;
+}
+.block2 {
+    background-image: url("../assets/img/Group\ 2136139108.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 34%;
+    height: 678px;
+    position: relative;
+    overflow: hidden;
+}
+.hit-checkbox1 {
+    display: none;
+}
+.ring {
+    position: absolute;
+    top: 145px;
+    left: 103px;
+    width: 50%;
+    height: 50%;
+    background-image: url("../assets/img/Ellipse\ 437.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ball-pineapple1 {
+    position: absolute;
+    top: 285px;
+    left: 62px;
+    width: 70%;
+    height: 70%;
+    background-image: url("../assets/img/Group\ 2136138981.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    cursor: pointer;
+    animation: gates-pineapple 3s linear;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+.hit-checkbox1:checked ~ .ball-pineapple1 {
+    animation-play-state: running;
+}
+.block3 {
+    background-image: url("../assets/img/Group\ 2136139109.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 34%;
+    height: 678px;
+    position: relative;
+}
+.hit-checkbox2 {
+    display: none;
+}
+.ball-tomato1 {
+    position: absolute;
+    top: 58px;
+    left: 125px;
+    width: 30%;
+    height: 30%;
+    background-image: url("../assets/img/Group\ 2136139022.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    animation: gates-tomato 3s ease-in-out;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+.hit-checkbox2:checked ~ .ball-tomato1 {
+    animation-play-state: running;
+}
+.footer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+    flex-direction: column;
+}
+.orchard1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer1 {
+    font-weight: 100;
+    color: #D9D9D9;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 333px;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer2 {
+    font-weight: 500;
+    color: #FF9F06;
+    font-size: 50px;
+    display: inline-block;
+    animation: stretch-horizontally 3s ease-in-out infinite;
+    white-space: nowrap;
+}
+.wave-text1:nth-child(1) { 
+    animation: wave4 1.5s linear infinite;
+    animation-delay: 0s;
+}
+
+.wave-text1:nth-child(2) { 
+    animation: wave4 1.5s linear infinite;
+    animation-delay: 0.2s;
+}
+
+.wave-text1:nth-child(3) { 
+    animation: wave4 1.5s linear infinite;
+    animation-delay: 0.4s;
+}
+
+.wave-text1:nth-child(4) { 
+    animation: wave4 1.5s linear infinite;
+    animation-delay: 0.6s;
+}
+
+.wave-text1:nth-child(5) { 
+    animation: wave4 1.5s linear infinite;
+    animation-delay: 0.8s;
+}
+
+.wave-text1:nth-child(6) { 
+    animation: wave4 1.5s linear infinite;
+    animation-delay: 1s;
+}
+
+.wave-text1:nth-child(7) { 
+    animation: wave4 1.5s linear infinite;
+    animation-delay: 1.2s;
+}
+.text-rotate {
+    animation: text-rotate 1.5s linear infinite;
 }

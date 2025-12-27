@@ -117,10 +117,7 @@ h1 {
     z-index: 2;
     transform-style: preserve-3d;
     perspective: 1000px;
-    animation: ball-rotate 1.5s linear infinite;
-}
-.ball-pineapple:hover {
-    animation: ball-flip 1s;
+    animation: ball-animation1 6s linear infinite;
 }
 .screen-2-block2 {
     width: 50%;
@@ -213,11 +210,11 @@ h1 {
     z-index: 2;
     transform-style: preserve-3d;
     perspective: 1000px;
-    animation: ball-rotate 1.5s linear infinite;
+    animation: ball-animation1 6s linear infinite;
 }
-.ball-lemon:hover {
+/* .ball-lemon:hover {
     animation: ball-flip 1s;
-}
+} */
 .screen-2-block4 {
     width: 50%;
     height: 50%;

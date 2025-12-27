@@ -13,7 +13,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     overflow-x: hidden;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 97fed15ed9e9ea87e06bb67a365dc53892af1bf5
 }
 .screens-container {
     display: flex;
@@ -496,6 +499,7 @@ h1 {
 .footer {
     background-color: #132E1D;
     display: flex;
+    background-color: #132E1D;
     gap: 20px;
     justify-content: center;
     align-items: center;
